@@ -1,0 +1,66 @@
+#banner-fade pre{
+	background-image:linear-gradient(#19882C,#0A5517);
+	width:580px;
+	padding:5px;
+	-moz-border-radius:7px;
+	-webkit-border-radius:7px;
+	border-radius:7px 7px 0px 0px;
+	color:#FFF;
+	font-weight:bold;
+	margin:0px;
+}
+#banner-fade img{
+	border-radius:0px 0px 7px 7px;
+}
+h2{
+	font-size: 48px;
+}
+
+pre + h2{
+	margin-top: 80px;
+}
+
+#container{
+	max-width:590px;
+	margin:0 auto;
+	font-size:10px;
+	/*padding-bottom:80px;*/
+	height:270px;
+}
+
+#banner-fade,#banner-slide{
+	margin-bottom: 50px;
+}
+
+ul.bjqs-controls.v-centered li a{
+	display:block;
+	padding:10px;
+	background:#fff;
+	color:#000;
+	text-decoration: none;
+}
+
+ul.bjqs-controls.v-centered li a:hover{
+	background:#000;
+	color:#fff;
+}
+
+ol.bjqs-markers li a{
+	padding:5px 10px;
+	/*background:#000;*color:#999;*/
+	background:green;
+	color:#FFF;
+	text-decoration: none;
+	height:5px;
+}
+
+ol.bjqs-markers li.active-marker a,
+ol.bjqs-markers li a:hover{
+	background:yellow;
+	color:green;
+	
+}
+
+p.bjqs-caption{
+	background: rgba(255,255,255,0.5);
+}

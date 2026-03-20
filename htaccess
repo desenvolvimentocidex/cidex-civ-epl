@@ -1,0 +1,58 @@
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+
+DirectoryIndex index.html index.php index.html
+
+Options All -Indexes
+
+ErrorDocument 400 /erros/erro.html
+ErrorDocument 401 /erros/erro.html
+ErrorDocument 403 /erros/erro.html
+ErrorDocument 404 /erros/erro.html
+ErrorDocument 500 /erros/erro.html
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*index\.html\ HTTP/
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*index\.php\ HTTP/
+RewriteRule ^(([^/]+/)*)index\.html$ http://localhost/correios/$1 [R=301,L]
+RewriteRule ^(([^/]+/)*)index\.php$ http://localhost/correios/$1 [R=301,L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+<IfModule mod_deflate.c>
+  <FilesMatch "\.(js|css|jpg|png|gif|ico|php|html|htm)$">
+    <ifModule mod_filter.c>
+      SetOutputFilter DEFLATE
+      AddOutputFilterByType DEFLATE text/css text/javascript application/x-javascript text/html text/plain text/xml image/x-icon
+    </IfModule>
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType images/jpg "access 1 year"
+ExpiresByType images/jpeg "access 1 year"
+ExpiresByType images/gif "access 1 year"
+ExpiresByType images/png "access 1 year"
+ExpiresByType css/css "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType js/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType images/x-icon "access 1 year"
+ExpiresDefault "access 2 days"
+</IfModule>
+
+RewriteEngine on
+
+RewriteRule ^([a-z,0-9,A-Z,_-]+)$ /index.php?a=$1
+RewriteRule ^([a-z,0-9,A-Z,_-]+)$ /index.php?p=$1&a=$1
+

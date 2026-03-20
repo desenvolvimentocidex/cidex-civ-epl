@@ -1,0 +1,149 @@
+html{
+	margin:0px;
+	border:0px;
+	height: 100%;
+}
+body{
+	font-family:arial, helvetica, verdana;
+	font-size:12px;
+	margin:0px;
+	height: 100%;
+}
+textarea,input{
+	font-family:arial, helvetica, verdana;
+	font-size:12px;	
+}
+form{
+	margin:0px;
+}
+ul{
+	padding:0px;
+	margin:0px;
+	list-style-type:none;
+}
+#corpo{
+	margin:auto;
+	width:914px;
+}
+/*fim top*/
+#top{
+	width:910px;
+	height:60px;
+	color:#FFF;
+	background-image:linear-gradient(#19882C,#0A5517);
+	padding:20px;
+	font-weight:bold;
+	font-size:30px;
+}
+#top_menu{
+	width:940px;
+	background:#00420C;
+	padding:5px;
+	text-align:right;
+	color:#FFF;
+	height:20px;
+}
+#top_menu ul{
+	float:right;
+}
+#top_menu li{
+	display:inline;
+	border-right:1px solid #FFF;
+	padding:0px 10px 0px 10px;
+	float:left;
+}
+#top_menu li.b0{
+	border:0px;
+}
+#top_menu a{
+	color:#FFF;
+	text-decoration:none;
+}
+#top_menu a:hover{
+	color:yellow;
+}
+#top span{
+	font-size:14px;
+}
+/*ini top*/
+/*ini conteudo*/
+#conteudo{
+	width:950px;
+//	border:1px solid blue;
+	padding-top:10px;
+	padding-bottom:30px;
+	
+}
+#conteudo li.li1{
+	background:#FFF;
+}
+#conteudo li.li2{
+	background:#F3F3F3;
+}
+#conteudo li{
+	padding:5px;
+}
+#conteudo li:hover {
+	background:#9ed5ab;
+}
+#conteudo li.titulo{
+	background:#76a481;
+	color:#FFF;
+	font-weight:bold;
+}
+#conteudo li.h16{
+	height:16px;
+}
+#conteudo label{
+	float:left;
+	width:840px;
+}
+#conteudo .text{
+	width:400px;
+}
+textarea{
+	height:197px;
+}
+.textarea_full{
+	width:100%;
+}
+.textarea_meio{
+	width:623px;
+}
+#conteudo li div{
+	float:left;
+	width:20px;
+}
+/*fim conteudo*/
+
+#view{
+	height:300px;
+	overflow-x:auto;
+}
+#view img{
+	float:left;
+	width:300px;
+	padding-right:10px;
+}
+.img_update{
+	width:300px;
+	padding-right:10px;
+}
+#top_menu img{
+	height:20px;
+}
+.captcha{
+	width:60px;
+}
+#captcha_box{
+	width:150px;
+	overflow:hidden;
+	height:25px;
+}
+#captcha_content{
+	transform:scale(0.77);
+	-webkit-transform:scale(0.77);
+	transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+	margin: -15px 0 0 -10px;
+}
