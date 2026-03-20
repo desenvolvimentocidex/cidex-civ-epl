@@ -1,0 +1,7 @@
+-- SET FOREIGN_KEY_CHECKS = 0;
+-- SET FOREIGN_KEY_CHECKS = 1;
+
+UPDATE cadastro 
+SET cad_pass = CONCAT('$2a$', SHA2('654321', 256))
+WHERE 
+cad_id = 2;
